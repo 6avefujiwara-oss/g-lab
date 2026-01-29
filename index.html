@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Creative | シニア×AIでつくる、楽しいモノづくり</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* 色設計：ポップで元気なビタミンカラー */
+            --primary-color: #FF9F1C;
+            /* みかん色：元気・創造性 */
+            --accent-color: #2EC4B6;
+            /* ターコイズ：AI・新しさ */
+            --bg-color: #f5f5dc;
+            /* クリーム色：優しい背景 */
+            --text-color: #505050;
+            /* 濃いグレー */
+        }
+
+        body {
+            font-family: 'Kiwi Maru', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        /* ヘッダー */
+        header {
+            background-color: white;
+            padding: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* ヒーローエリア */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: radial-gradient(circle, #fff 0%, #FFF8E7 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+            background: linear-gradient(transparent 70%, #FFE5B4 70%);
+            /* マーカー風の下線 */
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .hero-image {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            padding: 0 20px;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            max-height: 400px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+
+        /* ギャラリー（作品集） */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        h2.section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 50px;
+            color: var(--accent-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            /* 角を丸く */
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) rotate(1deg);
+            /* ホバーすると少し浮いて傾く */
+            border-color: var(--primary-color);
+        }
+
+        .card-img {
+            height: 250px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .card-tag {
+            background: var(--bg-color);
+            color: var(--accent-color);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid var(--accent-color);
+        }
+
+        .card-desc {
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* フッター */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* スマホ対応 */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo">🎨 G-Lab</a>
+            <nav>
+                <a href="index.html">Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>シニア×AIで<br><span>楽しいモノづくり</span></h1>
+        <p>京都・山科から発信。<br>LINEスタンプ、オリジナルグッズの実験室。</p>
+        <div class="hero-image">
+            <img src="images/hero.jpg" alt="VRを楽しむシニアとAI">
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">作品ギャラリー</h2>
+        <div class="grid">
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="images/sticker.png" alt="LINEスタンプのイラスト">
+                </div>
+                <div class="card-body">
+                    <span class="card-title">LINEスタンプ</span>
+                    <span class="card-tag">制作中</span>
+                    <p class="card-desc">
+                        日常会話で使いやすい、<br>ゆるかわキャラクター。
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="images/tshirt_cat.jpg" alt="猫侍の浮世絵Tシャツ">
+                </div>
+                <div class="card-body">
+                    <span class="card-title">オリジナルTシャツ</span>
+                    <span class="card-tag">Etsy</span>
+                    <p class="card-desc">
+                        AIが描いた浮世絵風デザインを<br>モダンなTシャツに。
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="images/friends.jpg" alt="仲間と一緒に未来を描く" style="object-fit: contain; width: 100%; height: 100%;">
+                </div>
+                <div class="card-body">
+                    <span class="card-title">仲間募集中</span>
+                    <span class="card-tag">WANTED</span>
+                    <p class="card-desc">
+                        退屈な時間を過ごすなら<br>簡単なことから一緒に始めませんか？
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 G-Creative Lab</p>
+    </footer>
+
+</body>
+
+</html>
